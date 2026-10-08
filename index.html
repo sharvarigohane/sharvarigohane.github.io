@@ -1,0 +1,832 @@
+<!DOCTYPE html><html class="dark stitch-anim-fade-in" lang="en" style="color-scheme: dark; background-color: rgb(11, 15, 25); color: rgb(241, 245, 249); height: auto; min-height: 100vh !important; visibility: visible !important; display: block !important;" data-stitch-orig-opacity="1"><head><script id="theme-init" class="">try { var saved = localStorage.getItem('theme'); if (saved === 'light') { document.documentElement.classList.remove('dark'); document.documentElement.classList.add('light'); document.documentElement.style.colorScheme = 'light'; } else { document.documentElement.classList.add('dark'); document.documentElement.classList.remove('light'); document.documentElement.style.colorScheme = 'dark'; localStorage.setItem('theme', 'dark'); } } catch(e) { document.documentElement.classList.add('dark'); }</script><style id="visibility-fallback">html, body { opacity: 1 !important; visibility: visible !important; display: block !important; background-color: #0f131c !important; color: #dfe2ef !important; }</style><script class="">try{if('scrollRestoration' in history){history.scrollRestoration='manual';}window.scrollTo(0,0);document.documentElement.scrollTop=0;document.body&& (document.body.scrollTop=0);}catch(e){}</script><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"secondary-fixed-dim":"#4cd7f6","error":"#ef4444","secondary-container":"#03b5d3","on-surface-variant":"#c7c4d7","primary-container":"#8083ff","surface":"#0f131c","tertiary-container":"#a078ff","inverse-primary":"#494bd6","surface-bright":"#353943","outline":"#908fa0","on-background":"#dfe2ef","on-error":"#ffffff","on-surface":"#dfe2ef","surface-variant":"#31353f","secondary":"#4cd7f6","on-tertiary-fixed-variant":"#5516be","surface-container-highest":"#31353f","background":"#0f131c","on-secondary":"#003640","tertiary-fixed":"#e9ddff","on-primary-fixed":"#07006c","surface-dim":"#0f131c","inverse-on-surface":"#2c303a","tertiary-fixed-dim":"#d0bcff","error-container":"#93000a","surface-container":"#1c1f29","surface-tint":"#c0c1ff","on-tertiary":"#3c0091","on-tertiary-container":"#340080","on-error-container":"#ffdad6","on-secondary-container":"#00424e","surface-container-low":"#181b25","primary-fixed":"#e1e0ff","secondary-fixed":"#acedff","on-primary-container":"#0d0096","on-primary-fixed-variant":"#2f2ebe","on-tertiary-fixed":"#23005c","outline-variant":"#464554","inverse-surface":"#dfe2ef","on-secondary-fixed":"#001f26","on-secondary-fixed-variant":"#004e5c","surface-container-lowest":"#0a0e17","surface-container-high":"#262a34","tertiary":"#d0bcff","primary-fixed-dim":"#c0c1ff","primary":"#c0c1ff","on-primary":"#1000a9"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","margin-mobile":"1.25rem","space-md":"1rem","space-2xl":"4rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-xs":"0.25rem","margin":"3rem","space-lg":"1.5rem","space-3xl":"6rem","space-sm":"0.5rem"},"fontFamily":{"display-hero":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"headline-lg":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"display-hero-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"tech-badge":["JetBrains Mono"],"headline-xl":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"label-sm":["JetBrains Mono"],"body-lg":["Plus Jakarta Sans"],"tech-code":["JetBrains Mono"]},"fontSize":{"display-hero":["64px",{"lineHeight":"72px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-hero-mobile":["38px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"500"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"tech-badge":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-xl":["44px",{"lineHeight":"52px","letterSpacing":"-0.025em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"tech-code":["14px",{"lineHeight":"20px","fontWeight":"500"}]}}}}</script><style class="" id="light-mode-enhancements">html:not(.dark) body {
+  background-color: #f8fafc !important;
+}
+html:not(.dark) main {
+  background-color: #f8fafc !important;
+}
+
+/* High-definition, crisp card containers */
+html:not(.dark) section#experience > div > div.rounded-2xl,
+html:not(.dark) .project-card,
+html:not(.dark) section#skills div.rounded-2xl,
+html:not(.dark) section#skills div.col-span-full,
+html:not(.dark) section#education > div > div.rounded-2xl,
+html:not(.dark) #certifications-inner .rounded-2xl,
+html:not(.dark) section#contact > div.rounded-3xl {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.02) !important;
+}
+
+/* Interactive hover state for cards */
+html:not(.dark) .project-card:hover,
+html:not(.dark) section#skills div.rounded-2xl:hover,
+html:not(.dark) section#skills div.col-span-full:hover,
+html:not(.dark) #certifications-inner .rounded-2xl:hover,
+html:not(.dark) section#experience > div > div.rounded-2xl:hover {
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 12px 28px -4px rgba(15, 23, 42, 0.09), 0 4px 10px -2px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* Inner contribution & coursework nested cards */
+html:not(.dark) section#experience div.grid.grid-cols-1.md\:grid-cols-2 > div.rounded-xl,
+html:not(.dark) section#skills div.col-span-full div.rounded-xl,
+html:not(.dark) section#skills div.p-3\.5.rounded-xl,
+html:not(.dark) section#education div.grid-cols-1.lg\:grid-cols-2 > div.rounded-xl {
+  background-color: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04) !important;
+}
+html:not(.dark) section#experience div.grid.grid-cols-1.md\:grid-cols-2 > div.rounded-xl:hover,
+html:not(.dark) section#skills div.col-span-full div.rounded-xl:hover,
+html:not(.dark) section#skills div.p-3\.5.rounded-xl:hover,
+html:not(.dark) section#education div.grid-cols-1.lg\:grid-cols-2 > div.rounded-xl:hover {
+  background-color: #ffffff !important;
+  border-color: #c7d2fe !important;
+  box-shadow: 0 4px 12px -2px rgba(99, 102, 241, 0.08) !important;
+}
+
+/* Education GPA Metric Card */
+html:not(.dark) section#education div.self-start.lg\:self-auto {
+  background-color: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 1px 4px 0 rgba(15, 23, 42, 0.05) !important;
+}
+
+/* Quick message terminal in Contact section */
+html:not(.dark) #contactForm {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06) !important;
+}
+
+/* Project category filter bar */
+html:not(.dark) section#projects div.inline-flex.p-1.rounded-xl {
+  background-color: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+html:not(.dark) section#projects button.filter-tab.bg-white {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.06) !important;
+  color: #4f46e5 !important;
+}
+
+/* Card chips, pills & tags in light mode */
+html:not(.dark) .project-card span.rounded-md,
+html:not(.dark) section#skills span.rounded-lg,
+html:not(.dark) section#skills span.rounded-md,
+html:not(.dark) section#experience span.rounded-full,
+html:not(.dark) section#education span.rounded-lg {
+  background-color: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+}
+html:not(.dark) .project-card span.rounded-md:hover,
+html:not(.dark) section#skills span.rounded-lg:hover,
+html:not(.dark) section#skills span.rounded-md:hover,
+html:not(.dark) section#experience span.rounded-full:hover,
+html:not(.dark) section#education span.rounded-lg:hover {
+  background-color: #e0e7ff !important;
+  border-color: #c7d2fe !important;
+  color: #3730a3 !important;
+}
+
+/* High-contrast crisp typography in light mode */
+html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3, html:not(.dark) h4 {
+  color: #0f172a !important;
+}
+html:not(.dark) p, html:not(.dark) li {
+  color: #475569 !important;
+}
+html:not(.dark) input, html:not(.dark) textarea {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+}
+html:not(.dark) input:focus, html:not(.dark) textarea:focus {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+}
+
+/* Nav links uniform clean style */
+html:not(.dark) .nav-tab-link {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+  color: #475569 !important;
+}
+html:not(.dark) .nav-tab-link:hover {
+  background-color: transparent !important;
+  color: #4f46e5 !important;
+}
+
+/* Sharvari Gohane Vibrant Gradient Heading in Light Mode */
+html:not(.dark) h1 span.bg-clip-text {
+  background-image: linear-gradient(135deg, #4338ca 0%, #4f46e5 45%, #7c3aed 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  display: inline-block !important;
+}
+
+/* Hero CTA Buttons in Light Mode */
+html:not(.dark) section#about a[href="#projects"],
+html:not(.dark) a[href^="mailto:sharvarigohane@gmail.com?subject=Resume"] {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #7c3aed 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px -2px rgba(79, 70, 229, 0.45) !important;
+}
+html:not(.dark) section#about a[href="#projects"] span,
+html:not(.dark) section#about a[href="#projects"] .material-symbols-outlined,
+html:not(.dark) a[href^="mailto:sharvarigohane@gmail.com?subject=Resume"] span,
+html:not(.dark) a[href^="mailto:sharvarigohane@gmail.com?subject=Resume"] .material-symbols-outlined {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+html:not(.dark) section#about a[href="#projects"]:hover,
+html:not(.dark) a[href^="mailto:sharvarigohane@gmail.com?subject=Resume"]:hover {
+  background: linear-gradient(135deg, #4338ca 0%, #4f46e5 50%, #6d28d9 100%) !important;
+  box-shadow: 0 6px 20px -2px rgba(79, 70, 229, 0.6) !important;
+}
+
+/* Transmit Message Button in Light Mode */
+html:not(.dark) #submitBtn {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #7c3aed 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px -2px rgba(79, 70, 229, 0.45) !important;
+}
+html:not(.dark) #submitBtn * {
+  color: #ffffff !important;
+}
+html:not(.dark) #submitBtn:hover {
+  background: linear-gradient(135deg, #4338ca 0%, #4f46e5 50%, #6d28d9 100%) !important;
+  box-shadow: 0 6px 20px -2px rgba(79, 70, 229, 0.6) !important;
+}
+
+/* Brand Monogram Badge - Light Theme */
+html:not(.dark) .brand-monogram-badge,
+html.light .brand-monogram-badge {
+  background: linear-gradient(135deg, #f8f9ff 0%, #edf0ff 100%) !important;
+  border: 1px solid #d5daf7 !important;
+  box-shadow: 0 1px 3px 0 rgba(79, 70, 229, 0.08), 0 1px 2px -1px rgba(79, 70, 229, 0.04) !important;
+}
+html:not(.dark) .brand-monogram-badge .monogram-text,
+html.light .brand-monogram-badge .monogram-text {
+  color: #3730a3 !important;
+  font-weight: 700 !important;
+}
+html:not(.dark) a[data-path='portfolio-home']:hover .brand-monogram-badge,
+html.light a[data-path='portfolio-home']:hover .brand-monogram-badge {
+  border-color: #a5b4fc !important;
+  box-shadow: 0 4px 12px 0 rgba(99, 102, 241, 0.15) !important;
+  transform: translateY(-1px);
+}
+html:not(.dark) .brand-name,
+html.light .brand-name {
+  color: #0f172a !important;
+}
+html:not(.dark) a[data-path='portfolio-home']:hover .brand-name,
+html.light a[data-path='portfolio-home']:hover .brand-name {
+  color: #4f46e5 !important;
+}
+html:not(.dark) .brand-sub,
+html.light .brand-sub {
+  color: #4f46e5 !important;
+}
+
+/* Brand Monogram Badge - Dark Theme (Strictly preserved) */
+html.dark .brand-monogram-badge {
+  background: rgba(49, 53, 63, 0.8) !important;
+  border: 1px solid rgba(70, 69, 84, 0.5) !important;
+  box-shadow: 0 0 12px -2px rgba(192, 193, 255, 0.15) !important;
+}
+html.dark .brand-monogram-badge .monogram-text {
+  color: #c0c1ff !important;
+  font-weight: 700 !important;
+}
+html.dark a[data-path='portfolio-home']:hover .brand-monogram-badge {
+  border-color: #c0c1ff !important;
+  box-shadow: 0 0 18px -2px rgba(192, 193, 255, 0.4) !important;
+  transform: translateY(-1px);
+}
+html.dark .brand-name {
+  color: #dfe2ef !important;
+}
+html.dark a[data-path='portfolio-home']:hover .brand-name {
+  color: #c0c1ff !important;
+}
+html.dark .brand-sub {
+  color: #4cd7f6 !important;
+}
+/* Hero Portrait Light Mode Bezels & Border Cleanup */
+html:not(.dark) #hero-drop-zone {
+  background-color: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+}
+html:not(.dark) #hero-avatar-img {
+  border-radius: 1rem !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+html:not(.dark) #hero-drop-zone label {
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+}
+
+/* Shared hero CTA button styles ensuring identical gradient, white text, and hover glow in light mode */
+html:not(.dark) #hero-explore-btn,
+html:not(.dark) #hero-resume-btn {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #7c3aed 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px -2px rgba(79, 70, 229, 0.45) !important;
+}
+html:not(.dark) #hero-explore-btn span,
+html:not(.dark) #hero-explore-btn .material-symbols-outlined,
+html:not(.dark) #hero-resume-btn span,
+html:not(.dark) #hero-resume-btn .material-symbols-outlined {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+html:not(.dark) #hero-explore-btn:hover,
+html:not(.dark) #hero-resume-btn:hover {
+  background: linear-gradient(135deg, #4338ca 0%, #4f46e5 50%, #6d28d9 100%) !important;
+  box-shadow: 0 6px 20px -2px rgba(79, 70, 229, 0.6) !important;
+}
+
+
+/* Instant theme change for hero photo frame, borders, shadows & all child elements */
+#hero-drop-zone,
+#hero-drop-zone *,
+#hero-avatar-img,
+section#about .aspect-square,
+section#about .aspect-square *,
+section#about div:has(> #hero-drop-zone),
+section#about .max-w-\[320px\],
+section#about .max-w-\[320px\] *,
+section#about .max-w-\[320px\] *::before,
+section#about .max-w-\[320px\] *::after {
+  transition: none !important;
+  animation: none !important;
+  transition-property: none !important;
+  transition-duration: 0s !important;
+}</style></head><body class="bg-slate-50 dark:bg-surface font-body-md text-body-md text-slate-800 dark:text-on-surface antialiased selection:bg-indigo-500/20 selection:text-indigo-900 dark:selection:bg-primary-container dark:selection:text-on-primary-container min-h-screen flex flex-col transition-colors duration-200" style="visibility: visible !important; display: block !important; background-color: rgb(11, 15, 25) !important; color: rgb(223, 226, 239) !important; min-height: 100vh !important; height: auto !important; overflow: hidden auto !important;" data-stitch-orig-opacity="1"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-white/85 dark:bg-surface/80 backdrop-blur-xl border-b border-slate-200/80 dark:border-outline-variant/30 shadow-[0_1px_10px_rgba(0,0,0,0.03)] dark:shadow-[0_1px_8px_rgba(0,0,0,0.4)] transition-all" id="site-header"><div class="mx-auto px-4 sm:px-6 lg:px-margin flex items-center justify-between gap-space-md w-full max-w-7xl h-[68px]"><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-sm group" data-path="portfolio-home" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"><img alt="SG Developer Monogram" class="h-10 w-10 sm:h-11 sm:w-11 object-contain rounded ring-1 ring-slate-200 dark:ring-transparent" src="https://lh3.googleusercontent.com/aida/AEtjO1V9sg5-f6xX5z2UiG7YGcNTs6oa1ufnwWpOguuk3VvU33hUpsdrpBo_7BUwkxY0mKM9uPrHY8D6rG_i2QIai18hgQN0SKS-smUJYqroAnukeMGz0ZRC9ceIHZrImQSODKs74iuiFUVszodyRIHoQcNhW3_4JwWs3cHDEjH8XKg-gAN5wUhi6hxyW7LAjnXTO4Dgykd8N9xB6zAmTK7JiDwQOwbtYI8BNk-sY2EAgthB"><div class="flex flex-col"><span class="font-body-md text-sm sm:text-base font-semibold tracking-tight text-slate-900 dark:text-on-surface group-hover:text-indigo-600 dark:group-hover:text-primary transition-colors">Sharvari Gohane</span><span class="font-tech-code text-sky-600 dark:text-secondary font-medium uppercase tracking-wider text-[9px] sm:text-[10px] opacity-80">SWE &amp; Security</span></div></a></div><nav class="hidden md:flex items-center gap-space-lg" id="main-nav"><a class="nav-tab-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-on-surface-variant font-body-sm text-body-sm font-medium transition-all duration-200 hover:text-indigo-600 dark:hover:text-white whitespace-nowrap active-nav-link" data-path="about" data-tab="about" href="#about" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">About</a><a class="nav-tab-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-on-surface-variant font-body-sm text-body-sm font-medium transition-all duration-200 hover:text-indigo-600 dark:hover:text-white whitespace-nowrap" data-path="experience" data-tab="experience" href="#experience" onclick="scrollToSection(event, 'experience')">Experience</a><a class="nav-tab-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-on-surface-variant font-body-sm text-body-sm font-medium transition-all duration-200 hover:text-indigo-600 dark:hover:text-white whitespace-nowrap" data-path="projects" data-tab="projects" href="#projects" onclick="scrollToSection(event, 'projects')">Projects</a><a class="nav-tab-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-on-surface-variant font-body-sm text-body-sm font-medium transition-all duration-200 hover:text-indigo-600 dark:hover:text-white whitespace-nowrap" data-path="skills" data-tab="skills" href="#skills" onclick="scrollToSection(event, 'skills')">Skills</a><a class="nav-tab-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-on-surface-variant font-body-sm text-body-sm font-medium transition-all duration-200 hover:text-indigo-600 dark:hover:text-white whitespace-nowrap" data-path="education" data-tab="education" href="#education" onclick="scrollToSection(event, 'education')">Education</a><a class="nav-tab-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-on-surface-variant font-body-sm text-body-sm font-medium transition-all duration-200 hover:text-indigo-600 dark:hover:text-white whitespace-nowrap" data-path="contact" data-tab="contact" href="#contact" onclick="scrollToSection(event, 'contact')">Contact</a></nav><div class="flex items-center gap-2"><button aria-label="Toggle Light and Dark Mode" class="relative p-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-surface-container-high text-slate-700 dark:text-on-surface-variant hover:text-slate-900 dark:hover:text-on-surface dark:hover:bg-surface-container-highest transition-all flex items-center justify-center border border-slate-200 dark:border-transparent" onclick="toggleModeDirect()" type="button"><span class="material-symbols-outlined text-[20px] dark:hidden text-amber-500">light_mode</span><span class="material-symbols-outlined text-[20px] hidden dark:inline-block text-secondary">dark_mode</span></button><a class="hidden sm:inline-flex items-center justify-center rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white dark:bg-primary dark:text-on-primary font-body-sm text-body-sm font-semibold px-space-md py-2 dark:hover:bg-primary-fixed dark:hover:text-on-primary-fixed transition-all duration-200 hover:-translate-y-0.5 shadow-sm hover:shadow-lg dark:shadow-[0_0_20px_-4px_rgba(192,193,255,0.4)] dark:hover:shadow-[0_0_35px_-2px_rgba(192,193,255,0.65)]" href="#contact" onclick="scrollToSection(event, 'contact')">Get in Touch</a><button aria-label="Open Menu" class="md:hidden p-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-surface-container-high text-slate-700 dark:text-on-surface-variant hover:text-slate-900 dark:hover:text-white transition-all flex items-center justify-center border border-slate-200 dark:border-outline-variant/30" id="mobile-menu-toggle" onclick="toggleMobileNav()" type="button"><span class="material-symbols-outlined text-[22px]" id="mobile-menu-icon">menu</span></button></div></div><div class="md:hidden hidden border-t border-slate-200/80 dark:border-outline-variant/30 bg-white/95 dark:bg-surface-container-low/95 backdrop-blur-2xl px-4 py-4 shadow-xl transition-all" id="mobile-drawer"><div class="flex flex-col gap-2"><a class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-slate-700 dark:text-on-surface font-body-sm font-medium hover:bg-slate-100 dark:hover:bg-surface-container transition-colors" href="#about" onclick="handleMobileNavClick(event, 'about')"><span class="material-symbols-outlined text-body-sm text-indigo-600 dark:text-primary">person</span>About</a><a class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-slate-700 dark:text-on-surface font-body-sm font-medium hover:bg-slate-100 dark:hover:bg-surface-container transition-colors" href="#experience" onclick="handleMobileNavClick(event, 'experience')"><span class="material-symbols-outlined text-body-sm text-sky-600 dark:text-secondary">business_center</span>Experience</a><a class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-slate-700 dark:text-on-surface font-body-sm font-medium hover:bg-slate-100 dark:hover:bg-surface-container transition-colors" href="#projects" onclick="handleMobileNavClick(event, 'projects')"><span class="material-symbols-outlined text-body-sm text-indigo-600 dark:text-primary">terminal</span>Projects</a><a class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-slate-700 dark:text-on-surface font-body-sm font-medium hover:bg-slate-100 dark:hover:bg-surface-container transition-colors" href="#skills" onclick="handleMobileNavClick(event, 'skills')"><span class="material-symbols-outlined text-body-sm text-indigo-600 dark:text-primary">developer_mode</span>Skills</a><a class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-slate-700 dark:text-on-surface font-body-sm font-medium hover:bg-slate-100 dark:hover:bg-surface-container transition-colors" href="#education" onclick="handleMobileNavClick(event, 'education')"><span class="material-symbols-outlined text-body-sm text-indigo-600 dark:text-primary">school</span>Education</a><a class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-slate-700 dark:text-on-surface font-body-sm font-medium hover:bg-slate-100 dark:hover:bg-surface-container transition-colors" href="#contact" onclick="handleMobileNavClick(event, 'contact')"><span class="material-symbols-outlined text-body-sm text-sky-600 dark:text-secondary">alternate_email</span>Contact</a><div class="pt-2 border-t border-slate-200/60 dark:border-outline-variant/20 mt-1"><a class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white dark:bg-primary dark:text-on-primary font-body-sm font-semibold shadow-sm transition-all" href="#contact" onclick="handleMobileNavClick(event, 'contact')"><span class="material-symbols-outlined text-body-sm">mail</span>Get in Touch</a></div></div></div></header><script id="theme-toggle-handler" class="">window.toggleModeDirect = function() { var isDark = document.documentElement.classList.contains('dark'); if (isDark) { document.documentElement.classList.remove('dark'); document.documentElement.classList.add('light'); document.documentElement.style.colorScheme = 'light'; try { localStorage.setItem('theme', 'light'); } catch(e) {} } else { document.documentElement.classList.remove('light'); document.documentElement.classList.add('dark'); document.documentElement.style.colorScheme = 'dark'; try { localStorage.setItem('theme', 'dark'); } catch(e) {} } };</script><main class="w-full bg-slate-50/70 dark:bg-surface flex-1 transition-colors duration-200 pt-20"><div class="flex flex-col w-full relative overflow-hidden">
+<!-- Light Mode Subtle Top Pattern & Glow Auras -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden opacity-60 dark:opacity-100">
+<div class="absolute -top-32 left-1/4 w-[500px] h-[500px] bg-indigo-200/40 dark:bg-primary/10 rounded-full blur-[120px] dark:blur-[140px]"></div>
+<div class="absolute top-20 right-1/4 w-[420px] h-[420px] bg-sky-200/40 dark:bg-secondary/10 rounded-full blur-[110px] dark:blur-[130px]"></div>
+<div class="absolute inset-0 dark:hidden bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-70"></div>
+</div>
+<!-- HERO SECTION -->
+<section class="portfolio-tab-section tab-active relative w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-8 lg:pt-12 pb-12 lg:pb-16" id="about" style="scroll-margin-top: 0px !important; padding-bottom: 160px !important;"><div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 w-full max-w-5xl mx-auto"><div class="flex-1 min-w-0 w-full max-w-2xl flex flex-col gap-space-md text-left"><div class="flex flex-col gap-space-xs"><div class="font-tech-code text-tech-code text-indigo-600 dark:text-primary font-semibold uppercase tracking-widest flex items-center gap-2"><span class="">&gt; whoami</span><span class="h-1.5 w-8 bg-indigo-600/30 dark:bg-primary/40 rounded-full"></span></div><h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-headline-xl font-bold text-slate-900 dark:text-on-surface tracking-tight font-display-hero leading-tight sm:leading-tight">Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-violet-600 dark:from-primary dark:via-secondary dark:to-tertiary">Sharvari Gohane</span> 👋</h1><p class="text-lg sm:text-xl lg:text-headline-md font-semibold text-slate-800 dark:text-white tracking-tight">Software Engineer &amp; Cybersecurity Enthusiast</p><div class="flex items-center gap-2 pt-1"><span class="inline-flex items-center gap-1.5 font-tech-code text-label-sm text-slate-600 dark:text-on-surface-variant px-2.5 py-1 rounded-md bg-white dark:bg-surface-container-high border border-slate-200/80 dark:border-outline-variant/30 shadow-xs"><span class="material-symbols-outlined text-body-sm text-sky-600 dark:text-secondary">location_on</span>Nagpur, Maharashtra, India</span></div></div><p class="text-slate-600 dark:text-on-surface-variant leading-relaxed max-w-xl text-base sm:text-lg font-body-lg">Architecting resilient, secure systems and engineering high-impact web applications with modern protocols. Specialized in Computer Science &amp; Cyber Security with a stellar academic track record.</p><div class="flex flex-col items-start gap-4 pt-1 w-full"><div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto"><a class="inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white dark:bg-gradient-to-r dark:from-primary dark:to-primary-container px-space-lg py-3 dark:text-on-primary font-body-md font-semibold shadow-md hover:shadow-lg dark:shadow-[0_0_25px_-5px_rgba(192,193,255,0.45)] dark:hover:shadow-[0_0_35px_-2px_rgba(192,193,255,0.65)] hover:-translate-y-0.5 transition-all text-center min-h-[46px]" href="#projects" onclick="scrollToSection(event, 'projects')" id="hero-explore-btn"><span class="font-semibold text-white dark:text-on-primary">Explore Featured Projects</span><span class="material-symbols-outlined text-body-md font-semibold text-white dark:text-on-primary">arrow_forward</span></a><a class="inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white dark:bg-gradient-to-r dark:from-primary dark:to-primary-container px-space-lg py-3 dark:text-on-primary font-body-md font-semibold shadow-md hover:shadow-lg dark:shadow-[0_0_25px_-5px_rgba(192,193,255,0.45)] dark:hover:shadow-[0_0_35px_-2px_rgba(192,193,255,0.65)] hover:-translate-y-0.5 transition-all text-center min-h-[46px]" href="https://drive.google.com/file/d/1UZWbPbqHIQtJduV-6Apfj229Qsk9IT5w/view?usp=sharing" target="_blank" rel="noopener noreferrer" id="hero-resume-btn"><span class="material-symbols-outlined text-body-md font-semibold text-white dark:text-on-primary">download</span><span class="font-semibold text-white dark:text-on-primary">Resume</span></a></div><div class="flex items-center gap-2 pt-1"><a aria-label="GitHub Profile" class="p-2.5 rounded-lg bg-white dark:bg-surface-container border border-slate-200 dark:border-transparent hover:bg-slate-100 dark:hover:bg-surface-container-highest text-slate-600 hover:text-indigo-600 dark:text-on-surface-variant dark:hover:text-primary transition-colors shadow-xs flex items-center justify-center min-w-[44px] min-h-[44px]" href="https://github.com/sharvarigohane" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg></a><a aria-label="LinkedIn Profile" class="p-2.5 rounded-lg bg-white dark:bg-surface-container border border-slate-200 dark:border-transparent hover:bg-slate-100 dark:hover:bg-surface-container-highest text-slate-600 hover:text-indigo-600 dark:text-on-surface-variant dark:hover:text-primary transition-colors shadow-xs flex items-center justify-center min-w-[44px] min-h-[44px]" href="https://linkedin.com/in/sharvarigohane" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a><a aria-label="Send Email" class="p-2.5 rounded-lg bg-white dark:bg-surface-container border border-slate-200 dark:border-transparent hover:bg-slate-100 dark:hover:bg-surface-container-highest text-slate-600 hover:text-sky-600 dark:text-on-surface-variant dark:hover:text-tertiary transition-colors shadow-xs flex items-center justify-center min-w-[44px] min-h-[44px]" href="mailto:sharvarigohane@gmail.com"><svg aria-hidden="true" class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg></a></div></div></div><div class="relative flex items-center justify-center shrink-0 w-full lg:w-auto max-w-[320px] sm:max-w-[340px] mx-auto"><div class="relative mx-auto flex flex-col items-center justify-center w-full max-w-[420px]"><div class="absolute -inset-1.5 rounded-3xl bg-gradient-to-tr from-indigo-500/30 via-sky-400/25 to-purple-500/30 dark:from-primary/30 dark:via-secondary/20 dark:to-tertiary/25 blur-2xl opacity-80 pointer-events-none"></div><div class="relative w-full rounded-2xl bg-white/95 dark:bg-surface-container-low/95 backdrop-blur-2xl border border-slate-200/90 dark:border-outline-variant/40 shadow-xl dark:shadow-2xl flex flex-col overflow-hidden"><div class="flex items-center justify-start py-3 px-4 border-b border-slate-200/80 dark:border-outline-variant/30 bg-slate-50/80 dark:bg-surface-container-high/60 z-20"><div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-red-400/80"></span><span class="w-2.5 h-2.5 rounded-full bg-amber-400/80"></span><span class="w-2.5 h-2.5 rounded-full bg-emerald-400/80"></span></div></div><div class="relative w-full flex items-center justify-center p-4 sm:p-5 overflow-hidden"><div class="relative z-10 w-full max-w-[245px] sm:max-w-[250px] mx-auto"><div class="relative rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-outline-variant/40 shadow-md dark:shadow-[0_0_30px_-5px_rgba(192,193,255,0.3)] group aspect-square w-full h-[230px] sm:h-[245px] max-w-[245px] mx-auto" id="hero-drop-zone"><img alt="Sharvari Gohane" class="w-full h-full object-cover rounded-xl" id="hero-avatar-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJiKvJOZC21mQmVGWjztyCQq9NkiosYAYE1mz-D50n5xCi0SdnV9RTrEVNp73LeAFvtB_wszaTUnhjfwWYxvR2EQZsu6wOiUe3_B9UdvM9JNpO11bLghDU4154f16h79IsGSsBYrJKeZPieLV9zGBr0AuBsYgN6oyaAf3vz-7aCGcGqI1rPJhqtxuivKx2osTm8gonxaGYv0dn_hI-qNNuKdv95mWx3cDJpDtjRBFgCcZ1cpO-m69JAD8DcSQvAgWpaI7VCnD9eZkvzA"></div></div></div></div></div></div></div></section>
+<!-- WORK EXPERIENCE SHOWCASE (Quorum Software) -->
+<section class="portfolio-tab-section w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin pb-space-xl pt-6" id="experience" style="scroll-margin-top: 72px;">
+<div class="flex flex-col gap-space-lg">
+<!-- Section Header -->
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-2 font-tech-badge text-tech-badge text-sky-600 dark:text-secondary uppercase tracking-widest font-semibold">
+<span class="material-symbols-outlined text-body-md">business_center</span>
+<span class="">01 // Professional Engineering Journey</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-slate-900 dark:text-on-surface font-display-hero">
+          Industry Experience
+        </h2>
+<p class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant">
+          Hands-on enterprise systems delivery, cloud environments, database migrations, and operational resilience.
+        </p>
+</div>
+<!-- Experience Highlight Bento Card -->
+<div class="rounded-2xl bg-white dark:bg-surface-container-low border border-slate-200 dark:border-outline-variant/40 backdrop-blur-xl p-space-lg shadow-sm hover:shadow-md dark:shadow-2xl relative overflow-hidden transition-all duration-300 group"><div class="absolute top-0 right-0 w-96 h-96 bg-indigo-100/40 dark:bg-primary/10 rounded-full blur-3xl pointer-events-none"></div><div class="absolute -bottom-24 -left-24 w-80 h-80 bg-sky-100/50 dark:bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg relative z-10"><div class="lg:col-span-4 flex flex-col justify-between gap-space-md border-b lg:border-b-0 lg:border-r border-slate-200 dark:border-outline-variant/30 pb-space-lg lg:pb-0 lg:pr-space-lg"><div class="flex flex-col gap-space-sm"><div class="inline-flex items-center gap-2 self-start px-space-sm py-1 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200 dark:bg-primary-container/20 dark:text-primary dark:border-primary/30 font-tech-badge text-tech-badge uppercase font-semibold"><span class="w-2 h-2 rounded-full bg-indigo-600 dark:bg-primary animate-pulse"></span>Corporate Internship</div><div><h3 class="font-headline-md text-headline-md text-slate-900 dark:text-on-surface font-bold tracking-tight">Quorum Software</h3><p class="font-body-md text-body-md text-indigo-600 dark:text-secondary font-semibold mt-0.5">Intern – Product Upgrade, CX &amp; Service Delivery</p></div><div class="flex flex-col gap-2 text-slate-600 dark:text-on-surface-variant font-tech-code text-tech-code pt-1"><span class="flex items-center gap-2 text-slate-700 dark:text-on-surface font-medium"><span class="material-symbols-outlined text-body-md text-indigo-600 dark:text-secondary">calendar_today</span>Jun 2025 – Jun 2026</span><span class="flex items-center gap-2 text-slate-700 dark:text-on-surface font-medium"><span class="material-symbols-outlined text-body-md text-indigo-600 dark:text-secondary">pin_drop</span>Pune, Maharashtra • Onsite</span></div></div></div><div class="lg:col-span-8 flex flex-col gap-space-md"><div class="font-tech-code text-tech-code text-slate-900 dark:text-on-surface uppercase tracking-wider flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-body-md text-sky-600 dark:text-secondary">checklist</span><span class="">Key Contributions &amp; Architectural Ownership</span></div><div class="grid grid-cols-1 md:grid-cols-2 gap-space-md"><div class="p-space-md rounded-xl bg-slate-50 dark:bg-surface-container-high/80 border border-slate-200 dark:border-outline-variant/40 shadow-xs flex flex-col gap-space-xs hover:border-sky-300 dark:hover:border-secondary hover:-translate-y-0.5 transition-all duration-300"><div class="flex items-center gap-2 text-sky-600 dark:text-secondary"><span class="material-symbols-outlined text-body-md">cloud_sync</span><span class="font-tech-badge text-tech-badge uppercase font-bold tracking-wide">Cloud &amp; On-Prem Releases</span></div><h4 class="font-body-md text-body-md text-slate-900 dark:text-on-surface font-semibold">10+ Enterprise Upgrade Cycles</h4><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant leading-relaxed">Independently executed end-to-end product upgrades across on-premise and cloud-hosted deployments, managing builds, version compatibility, and release delivery.</p></div><div class="p-space-md rounded-xl bg-slate-50 dark:bg-surface-container-high/80 border border-slate-200 dark:border-outline-variant/40 shadow-xs flex flex-col gap-space-xs hover:border-indigo-300 dark:hover:border-primary hover:-translate-y-0.5 transition-all duration-300"><div class="flex items-center gap-2 text-indigo-600 dark:text-primary"><span class="material-symbols-outlined text-body-md">database</span><span class="font-tech-badge text-tech-badge uppercase font-bold tracking-wide">Oracle Database Ops</span></div><h4 class="font-body-md text-body-md text-slate-900 dark:text-on-surface font-semibold">Database Upgrades &amp; SYS Privileges</h4><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant leading-relaxed">Validated pre-upgrade readiness, upgraded databases and metadata repositories to match client customizations, and managed Oracle SYS privilege grants with post-upgrade validation.</p></div><div class="p-space-md rounded-xl bg-slate-50 dark:bg-surface-container-high/80 border border-slate-200 dark:border-outline-variant/40 shadow-xs flex flex-col gap-space-xs hover:border-violet-300 dark:hover:border-tertiary hover:-translate-y-0.5 transition-all duration-300"><div class="flex items-center gap-2 text-violet-600 dark:text-tertiary"><span class="material-symbols-outlined text-body-md">alt_route</span><span class="font-tech-badge text-tech-badge uppercase font-bold tracking-wide">CI/CD &amp; Versioning</span></div><h4 class="font-body-md text-body-md text-slate-900 dark:text-on-surface font-semibold">Cross-Repo Dependency Alignment</h4><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant leading-relaxed">Upgraded code across repositories to resolve version alignment and cross-repo dependencies, and troubleshot continuous integration pipeline failures.</p></div><div class="p-space-md rounded-xl bg-slate-50 dark:bg-surface-container-high/80 border border-slate-200 dark:border-outline-variant/40 shadow-xs flex flex-col gap-space-xs hover:border-sky-300 dark:hover:border-secondary hover:-translate-y-0.5 transition-all duration-300"><div class="flex items-center gap-2 text-sky-600 dark:text-secondary"><span class="material-symbols-outlined text-body-md">smart_toy</span><span class="font-tech-badge text-tech-badge uppercase font-bold tracking-wide">Automations &amp; Quality</span></div><h4 class="font-body-md text-body-md text-slate-900 dark:text-on-surface font-semibold">Docs, Bug Fixes &amp; Automation</h4><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant leading-relaxed">Wrote upgrade documentation that tracked execution, issues, and readiness, cutting new-hire ramp-up time by 20%. Resolved 8+ post-deployment bugs with automated dashboard scripts.</p></div></div><div class="flex flex-wrap items-center gap-2 pt-space-xs"><span class="px-space-sm py-1 rounded-full bg-slate-100 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200 dark:border-outline-variant/40 font-tech-code text-tech-badge font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors">Oracle DB</span><span class="px-space-sm py-1 rounded-full bg-slate-100 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200 dark:border-outline-variant/40 font-tech-code text-tech-badge font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors">SQL Tuning</span><span class="px-space-sm py-1 rounded-full bg-slate-100 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200 dark:border-outline-variant/40 font-tech-code text-tech-badge font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors">CI/CD Pipelines</span><span class="px-space-sm py-1 rounded-full bg-slate-100 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200 dark:border-outline-variant/40 font-tech-code text-tech-badge font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors">Enterprise Upgrades</span><span class="px-space-sm py-1 rounded-full bg-slate-100 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200 dark:border-outline-variant/40 font-tech-code text-tech-badge font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors">Customer Experience</span><span class="px-space-sm py-1 rounded-full bg-slate-100 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200 dark:border-outline-variant/40 font-tech-code text-tech-badge font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors">Release Management</span></div></div></div></div>
+</div>
+</section>
+<!-- FEATURED PROJECTS SHOWCASE WITH INTERACTIVE FILTERING -->
+<section class="portfolio-tab-section w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin pb-space-xl pt-6" id="projects" style="scroll-margin-top: 72px;">
+<div class="flex flex-col gap-space-lg">
+<!-- Section Header & Category Filters -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-2 font-tech-badge text-tech-badge text-indigo-600 dark:text-primary uppercase tracking-widest font-semibold">
+<span class="material-symbols-outlined text-body-md">terminal</span>
+<span class="">02 // Systems &amp; Solutions</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-slate-900 dark:text-on-surface font-display-hero">
+            Featured Projects
+          </h2>
+<p class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant">
+            Engineered systems demonstrating end-to-end full-stack versatility, deep learning pipelines, and cybersecurity mechanisms.
+          </p>
+</div>
+<!-- Filter Segmented Tabs -->
+<div class="inline-flex p-1 rounded-xl bg-slate-100 dark:bg-surface-container-high/80 border border-slate-200 dark:border-transparent backdrop-blur-md shadow-xs self-start md:self-auto overflow-x-auto max-w-full">
+<button class="filter-tab px-space-md py-2 rounded-lg font-tech-badge text-tech-badge transition-all bg-white dark:bg-surface-container text-indigo-600 dark:text-primary shadow-xs font-semibold" data-filter="all" onclick="filterProjects('all')" type="button">All (5)</button>
+<button class="filter-tab px-space-md py-2 rounded-lg text-slate-600 hover:text-slate-900 dark:text-on-surface-variant dark:hover:text-on-surface font-tech-badge text-tech-badge transition-all" data-filter="ai-ml" onclick="filterProjects('ai-ml')" type="button">
+            AI &amp; ML
+          </button>
+<button class="filter-tab px-space-md py-2 rounded-lg text-slate-600 hover:text-slate-900 dark:text-on-surface-variant dark:hover:text-on-surface font-tech-badge text-tech-badge transition-all" data-filter="web-cloud" onclick="filterProjects('web-cloud')" type="button">
+            Web &amp; Cloud
+          </button>
+<button class="filter-tab px-space-md py-2 rounded-lg text-slate-600 hover:text-slate-900 dark:text-on-surface-variant dark:hover:text-on-surface font-tech-badge text-tech-badge transition-all" data-filter="cybersecurity" onclick="filterProjects('cybersecurity')" type="button">
+            Cybersecurity
+          </button>
+</div>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="projectsGrid">
+<!-- PROJECT 1: Stash Extension -->
+<div class="project-card cursor-pointer flex flex-col justify-between rounded-2xl bg-white dark:bg-surface-container-low/90 border border-slate-200/90 dark:border-transparent backdrop-blur-md p-space-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" data-categories="web-cloud" onclick="window.open('https://github.com/sharvarigohane/Stash---Web-Capture-Extension.git', '_blank', 'noopener,noreferrer')"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-sky-50 text-sky-700 border border-sky-200 dark:bg-secondary/10 dark:text-secondary dark:border-transparent font-tech-badge text-tech-badge uppercase font-semibold"><span class="material-symbols-outlined text-body-sm">extension</span>CHROME EXTENSION</span><div class="flex items-center gap-2"><a aria-label="View Source Code on GitHub: Stash Extension" class="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-surface-container dark:hover:bg-surface-container-highest text-slate-600 hover:text-slate-900 dark:text-on-surface-variant dark:hover:text-primary transition-colors flex items-center justify-center group/btn" href="https://github.com/sharvarigohane/Stash---Web-Capture-Extension.git" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="View Source Code on GitHub (Stash---Web-Capture-Extension)"><span class="material-symbols-outlined text-body-md group-hover/btn:scale-110 transition-transform">code</span></a></div></div><div><h3 class="font-headline-md text-headline-md text-slate-900 dark:text-on-surface font-semibold">Stash – Web Capture Extension</h3><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant mt-1 leading-relaxed">Context-aware research bookmarking &amp; task organizer with instant localized synchronization, Markdown export, and keyboard-first indexing.</p></div><div class="p-space-sm rounded-lg bg-slate-50 dark:bg-surface-container-lowest/80 border border-slate-200/60 dark:border-transparent font-tech-code text-tech-code text-sky-700 dark:text-secondary flex items-center gap-2 font-medium"><span class="material-symbols-outlined text-body-sm">bolt</span><span class="">Zero-latency offline sync via chrome.storage</span></div><div class="flex flex-wrap gap-1.5 pt-space-xs"><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">Manifest V3</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">Chrome APIs</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">Vanilla JS</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">CSS</span></div></div></div>
+<!-- PROJECT 2: Yoga Pose Detection System -->
+<div class="project-card cursor-pointer flex flex-col justify-between rounded-2xl bg-white dark:bg-surface-container-low/90 border border-slate-200/90 dark:border-transparent backdrop-blur-md p-space-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" data-categories="ai-ml" onclick="window.open('https://github.com/sharvarigohane/Yoga-Pose-Detection-System.git', '_blank', 'noopener,noreferrer')"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200 dark:bg-primary/10 dark:text-primary dark:border-transparent font-tech-badge text-tech-badge uppercase font-semibold"><span class="material-symbols-outlined text-body-sm">psychology</span>Deep Learning Model</span><div class="flex items-center gap-2"><a aria-label="View Source Code on GitHub: Yoga Pose Detection System" class="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-surface-container dark:hover:bg-surface-container-highest text-slate-600 hover:text-slate-900 dark:text-on-surface-variant dark:hover:text-primary transition-colors flex items-center justify-center group/btn" href="https://github.com/sharvarigohane/Yoga-Pose-Detection-System.git" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="View Source Code on GitHub (Yoga-Pose-Detection-System)"><span class="material-symbols-outlined text-body-md group-hover/btn:scale-110 transition-transform">code</span></a></div></div><div><h3 class="font-headline-md text-headline-md text-slate-900 dark:text-on-surface font-semibold">Yoga Pose Detection System</h3><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant mt-1 leading-relaxed">Real-time biomechanical analysis engine leveraging a hybrid Conv1D-LSTM neural architecture to detect postural deviation and alert against strain.</p></div><div class="p-space-sm rounded-lg bg-slate-50 dark:bg-surface-container-lowest/80 border border-slate-200/60 dark:border-transparent font-tech-code text-tech-code text-indigo-600 dark:text-primary flex items-center gap-2 font-medium"><span class="material-symbols-outlined text-body-sm">check_circle</span><span class="">85.5% Accuracy across 10 Complex Asanas</span></div><div class="flex flex-wrap gap-1.5 pt-space-xs"><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">Conv1D-LSTM</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">TensorFlow</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">MediaPipe</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">OpenCV</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">NumPy</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">Matplotlib</span></div></div></div>
+<!-- PROJECT 3: AccessLens – IAM Auditor -->
+<div class="project-card cursor-pointer flex flex-col justify-between rounded-2xl bg-white dark:bg-surface-container-low/90 border border-slate-200/90 dark:border-transparent backdrop-blur-md p-space-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" data-categories="web-cloud cybersecurity" onclick="window.open('https://github.com/sharvarigohane/AccessLens-IAM-Auditor.git', '_blank', 'noopener,noreferrer')"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-purple-50 text-purple-700 border border-purple-200 dark:bg-tertiary/10 dark:text-tertiary dark:border-transparent font-tech-badge text-tech-badge uppercase font-semibold"><span class="material-symbols-outlined text-body-sm">security</span>Cloud Security Simulation</span><div class="flex items-center gap-2"><a aria-label="View Source Code on GitHub: AccessLens IAM Auditor" class="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-surface-container dark:hover:bg-surface-container-highest text-slate-600 hover:text-slate-900 dark:text-on-surface-variant dark:hover:text-primary transition-colors flex items-center justify-center group/btn" href="https://github.com/sharvarigohane/AccessLens-IAM-Auditor.git" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="View Source Code on GitHub (AccessLens-IAM-Auditor)"><span class="material-symbols-outlined text-body-md group-hover/btn:scale-110 transition-transform">code</span></a></div></div><div><h3 class="font-headline-md text-headline-md text-slate-900 dark:text-on-surface font-semibold">AccessLens – IAM Auditor</h3><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant mt-1 leading-relaxed">Simulation-driven IAM audit engine detecting missing MFA, wildcard permissions, and stale access keys with risk-scored findings.</p></div><div class="p-space-sm rounded-lg bg-slate-50 dark:bg-surface-container-lowest/80 border border-slate-200/60 dark:border-transparent font-tech-code text-tech-code text-purple-700 dark:text-tertiary flex items-center gap-2 font-medium"><span class="material-symbols-outlined text-body-sm">shield</span><span class="">Automated Least-Privilege &amp; Risk Scoring</span></div><div class="flex flex-wrap gap-1.5 pt-space-xs"><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">AWS Boto3</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">Python 3.11</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">FastAPI</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">SQLite</span></div></div></div>
+<!-- PROJECT 4: CloudVault – Secure File Storage -->
+<div class="project-card cursor-pointer flex flex-col justify-between rounded-2xl bg-white dark:bg-surface-container-low/90 border border-slate-200/90 dark:border-transparent backdrop-blur-md p-space-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" data-categories="web-cloud cybersecurity" onclick="window.open('https://github.com/sharvarigohane/CloudVault---Secure-File-Storage.git', '_blank', 'noopener,noreferrer')"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-sky-50 text-sky-700 border border-sky-200 dark:bg-secondary/10 dark:text-secondary dark:border-transparent font-tech-badge text-tech-badge uppercase font-semibold"><span class="material-symbols-outlined text-body-sm">lock</span>Secure Cloud Storage</span><div class="flex items-center gap-2"><a aria-label="View Source Code on GitHub: CloudVault" class="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-surface-container dark:hover:bg-surface-container-highest text-slate-600 hover:text-slate-900 dark:text-on-surface-variant dark:hover:text-primary transition-colors flex items-center justify-center group/btn" href="https://github.com/sharvarigohane/CloudVault---Secure-File-Storage.git" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="View Source Code on GitHub (CloudVault---Secure-File-Storage)"><span class="material-symbols-outlined text-body-md group-hover/btn:scale-110 transition-transform">code</span></a></div></div><div><h3 class="font-headline-md text-headline-md text-slate-900 dark:text-on-surface font-semibold">CloudVault – Secure File Storage</h3><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant mt-1 leading-relaxed">Multi-user cloud file manager with owner-scoped access control, scrypt-hashed credentials, and pluggable storage layer.</p></div><div class="p-space-sm rounded-lg bg-slate-50 dark:bg-surface-container-lowest/80 border border-slate-200/60 dark:border-transparent font-tech-code text-tech-code text-sky-700 dark:text-secondary flex items-center gap-2 font-medium"><span class="material-symbols-outlined text-body-sm">verified_user</span><span class="">Owner-scoped ACL &amp; scrypt password derivation</span></div><div class="flex flex-wrap gap-1.5 pt-space-xs"><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">Python / Flask</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">Azure Blob REST</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">SQLite</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">Scrypt</span></div></div></div>
+<!-- PROJECT 5: DocuMind – Document Q&A -->
+<div class="project-card cursor-pointer flex flex-col justify-between rounded-2xl bg-white dark:bg-surface-container-low/90 border border-slate-200/90 dark:border-transparent backdrop-blur-md p-space-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" data-categories="ai-ml" onclick="window.open('https://github.com/sharvarigohane/DocuMind-Document-QA.git', '_blank', 'noopener,noreferrer')"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200 dark:bg-primary/10 dark:text-primary dark:border-transparent font-tech-badge text-tech-badge uppercase font-semibold"><span class="material-symbols-outlined text-body-sm">smart_toy</span>RAG Pipeline</span><div class="flex items-center gap-2"><a aria-label="View Source Code on GitHub: DocuMind" class="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-surface-container dark:hover:bg-surface-container-highest text-slate-600 hover:text-slate-900 dark:text-on-surface-variant dark:hover:text-primary transition-colors flex items-center justify-center group/btn" href="https://github.com/sharvarigohane/DocuMind-Document-QA.git" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank" title="View Source Code on GitHub (DocuMind-Document-QA)"><span class="material-symbols-outlined text-body-md group-hover/btn:scale-110 transition-transform">code</span></a></div></div><div><h3 class="font-headline-md text-headline-md text-slate-900 dark:text-on-surface font-semibold">DocuMind – Document Q&amp;A</h3><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant mt-1 leading-relaxed">Retrieval-augmented engine splitting PDFs/text into chunks with semantic search and vector embeddings for contextual querying.</p></div><div class="p-space-sm rounded-lg bg-slate-50 dark:bg-surface-container-lowest/80 border border-slate-200/60 dark:border-transparent font-tech-code text-tech-code text-indigo-600 dark:text-primary flex items-center gap-2 font-medium"><span class="material-symbols-outlined text-body-sm">search</span><span class="">Semantic similarity search with ChromaDB</span></div><div class="flex flex-wrap gap-1.5 pt-space-xs"><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">Python</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">LangChain</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">ChromaDB</span><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/80 dark:border-transparent dark:bg-surface-container dark:text-on-surface-variant font-tech-badge text-label-sm">Streamlit</span></div></div></div>
+</div>
+</div>
+</section>
+<!-- SECTION 03: TECHNICAL SKILLS & DOMAIN EXPERTISE MATRIX -->
+<section class="portfolio-tab-section w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin pb-space-xl pt-6" id="skills" style="scroll-margin-top: 72px;">
+<div class="flex flex-col gap-space-lg"><!-- Section Header -->
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-2 font-tech-badge text-tech-badge text-indigo-600 dark:text-primary uppercase tracking-widest font-semibold">
+<span class="material-symbols-outlined text-body-md">developer_mode</span>
+<span class="">03 // TECHNICAL MASTERY &amp; TOOLCHAIN</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-slate-900 dark:text-on-surface font-display-hero">
+    Technical Skills &amp; Domain Expertise
+  </h2>
+<p class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant leading-relaxed">My toolkit for building, securing, and shipping software, from Oracle upgrades to RAG pipelines.</p>
+</div>
+<!-- Redesigned Skills Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md"><!-- Top 5 Core Skill Cards in a crisp, balanced responsive grid (3-column on lg with spans or 6-col grid) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md col-span-full hover:-translate-y-0.5"><!-- 1. Languages -->
+<div class="p-space-lg rounded-2xl bg-white dark:bg-surface-container-low border border-slate-200/90 dark:border-outline-variant/30 backdrop-blur-md shadow-xs hover:shadow-lg dark:hover:shadow-2xl flex flex-col justify-between gap-space-md hover:border-indigo-400 dark:hover:border-primary/50 hover:-translate-y-0.5 transition-all duration-300 group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-sm border-b border-slate-100 dark:border-outline-variant/30">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-primary/10 text-indigo-600 dark:text-primary flex items-center justify-center border border-indigo-200/60 dark:border-primary/20">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold text-slate-900 dark:text-on-surface tracking-tight">Languages</h3>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Python
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>JavaScript
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>HTML
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>CSS
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>SQL
+        </span>
+</div>
+</div>
+</div>
+<!-- 2. Backend & APIs -->
+<div class="p-space-lg rounded-2xl bg-white dark:bg-surface-container-low border border-slate-200/90 dark:border-outline-variant/30 backdrop-blur-md shadow-xs hover:shadow-lg dark:hover:shadow-2xl flex flex-col justify-between gap-space-md hover:border-sky-400 dark:hover:border-secondary/50 hover:-translate-y-0.5 transition-all duration-300 group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-sm border-b border-slate-100 dark:border-outline-variant/30">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-sky-50 dark:bg-secondary/10 text-sky-600 dark:text-secondary flex items-center justify-center border border-sky-200/60 dark:border-secondary/20">
+<span class="material-symbols-outlined text-[20px]">dns</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold text-slate-900 dark:text-on-surface tracking-tight">Backend &amp; APIs</h3>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Flask
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>FastAPI
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>REST APIs
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Authentication &amp; Sessions
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Streamlit
+        </span>
+</div>
+</div>
+</div>
+<!-- 3. Databases -->
+<div class="p-space-lg rounded-2xl bg-white dark:bg-surface-container-low border border-slate-200/90 dark:border-outline-variant/30 backdrop-blur-md shadow-xs hover:shadow-lg dark:hover:shadow-2xl flex flex-col justify-between gap-space-md hover:border-sky-400 dark:hover:border-secondary/50 hover:-translate-y-0.5 transition-all duration-300 group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-sm border-b border-slate-100 dark:border-outline-variant/30">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-sky-50 dark:bg-secondary/10 text-sky-600 dark:text-secondary flex items-center justify-center border border-sky-200/60 dark:border-secondary/20">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold text-slate-900 dark:text-on-surface tracking-tight">Databases</h3>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Oracle DB
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>SQLite
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Vector Databases
+        </span>
+</div>
+</div>
+</div>
+<!-- 4. Cloud & Security (Single column card matching Databases and Languages) -->
+<div class="p-space-lg rounded-2xl bg-white dark:bg-surface-container-low border border-slate-200/90 dark:border-outline-variant/30 backdrop-blur-md shadow-xs hover:shadow-lg dark:hover:shadow-2xl flex flex-col justify-between gap-space-md hover:border-purple-400 dark:hover:border-tertiary/50 hover:-translate-y-0.5 transition-all duration-300 group"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between pb-space-sm border-b border-slate-100 dark:border-outline-variant/30"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-purple-50 dark:bg-tertiary/10 text-purple-700 dark:text-tertiary flex items-center justify-center border border-purple-200/60 dark:border-tertiary/20"><span class="material-symbols-outlined text-[20px]">shield</span></div><h3 class="font-headline-md text-body-lg font-bold text-slate-900 dark:text-on-surface tracking-tight">Cloud &amp; Security</h3></div></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1"><span class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-purple-400 dark:hover:border-tertiary hover:-translate-y-0.5 transition-all shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-purple-600 dark:bg-tertiary shrink-0"></span>AWS (EC2, S3, IAM)</span><span class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-purple-400 dark:hover:border-tertiary hover:-translate-y-0.5 transition-all shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-purple-600 dark:bg-tertiary shrink-0"></span>Azure DevOps</span><span class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-purple-400 dark:hover:border-tertiary hover:-translate-y-0.5 transition-all shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-purple-600 dark:bg-tertiary shrink-0"></span>IAM Auditing</span><span class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-purple-400 dark:hover:border-tertiary hover:-translate-y-0.5 transition-all shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-purple-600 dark:bg-tertiary shrink-0"></span>Least Privilege</span><span class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-purple-400 dark:hover:border-tertiary hover:-translate-y-0.5 transition-all shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-purple-600 dark:bg-tertiary shrink-0"></span>Zero Trust</span><span class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-50 dark:bg-surface-container text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-purple-400 dark:hover:border-tertiary hover:-translate-y-0.5 transition-all shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-purple-600 dark:bg-tertiary shrink-0"></span>Cryptography Fundamentals</span></div></div></div>
+<!-- 5. AI & ML (Cleanly sized card spanning across 2 columns on lg to neatly fill row 2 alongside Cloud & Security, with tight, balanced chip grid layout and no excess whitespace) -->
+<div class="md:col-span-2 lg:col-span-2 p-space-lg rounded-2xl bg-white dark:bg-surface-container-low border border-slate-200/90 dark:border-outline-variant/30 backdrop-blur-md shadow-xs hover:shadow-lg dark:hover:shadow-2xl flex flex-col justify-between gap-space-md hover:border-indigo-400 dark:hover:border-primary/50 hover:-translate-y-0.5 transition-all duration-300 group"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between pb-space-sm border-b border-slate-100 dark:border-outline-variant/30"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-primary/10 text-indigo-600 dark:text-primary flex items-center justify-center border border-indigo-200/60 dark:border-primary/20"><span class="material-symbols-outlined text-[20px]">psychology</span></div><div class="flex items-center gap-2"><h3 class="font-headline-md text-body-lg font-bold text-slate-900 dark:text-on-surface tracking-tight">AI &amp; ML</h3></div></div></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-1"><div class="p-3.5 rounded-xl bg-slate-50/70 dark:bg-surface-container border border-slate-200/70 dark:border-outline-variant/30 flex flex-col gap-2.5 shadow-xs"><div class="flex items-center justify-between pb-1.5 border-b border-slate-200/50 dark:border-outline-variant/20"><span class="font-tech-badge text-[11px] text-slate-700 dark:text-on-surface uppercase tracking-wider font-bold flex items-center gap-1.5"><span class="material-symbols-outlined text-body-sm text-indigo-600 dark:text-primary">visibility</span>Vision &amp; Deep Learning</span></div><div class="flex flex-wrap gap-1.5"><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></span>TensorFlow/Keras</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></span>MediaPipe</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></span>OpenCV</span></div></div><div class="p-3.5 rounded-xl bg-slate-50/70 dark:bg-surface-container border border-slate-200/70 dark:border-outline-variant/30 flex flex-col gap-2.5 shadow-xs"><div class="flex items-center justify-between pb-1.5 border-b border-slate-200/50 dark:border-outline-variant/20"><span class="font-tech-badge text-[11px] text-slate-700 dark:text-on-surface uppercase tracking-wider font-bold flex items-center gap-1.5"><span class="material-symbols-outlined text-body-sm text-sky-600 dark:text-secondary">neurology</span>LLM &amp; RAG Systems</span></div><div class="flex flex-wrap gap-1.5"><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0"></span>LangChain</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0"></span>ChromaDB</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0"></span>RAG Pipelines</span></div></div></div></div></div></div>
+<!-- 6. Tools & Workflow: Dedicated Full-Width Bento Card with 4 Distinct Groupings -->
+<div class="col-span-full p-space-lg rounded-2xl bg-white dark:bg-surface-container-low border border-slate-200/90 dark:border-outline-variant/30 backdrop-blur-md shadow-xs hover:shadow-lg dark:hover:shadow-2xl flex flex-col gap-space-md hover:border-violet-400 dark:hover:border-tertiary/50 transition-all duration-300 group hover:-translate-y-0.5">
+<div class="flex items-center justify-between pb-space-sm border-b border-slate-100 dark:border-outline-variant/30">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-purple-50 dark:bg-tertiary/10 text-purple-700 dark:text-tertiary flex items-center justify-center border border-purple-200/60 dark:border-tertiary/20">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<div>
+<h3 class="font-headline-md text-body-lg font-bold text-slate-900 dark:text-on-surface tracking-tight">Tools &amp; Workflow</h3>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md pt-1">
+<!-- Subgroup 1: Editors & IDEs -->
+<div class="p-3.5 rounded-xl bg-slate-50/70 dark:bg-surface-container border border-slate-200/70 dark:border-outline-variant/30 flex flex-col gap-2.5 shadow-xs">
+<div class="flex items-center justify-between pb-1.5 border-b border-slate-200/50 dark:border-outline-variant/20">
+<span class="font-tech-badge text-[11px] text-slate-700 dark:text-on-surface uppercase tracking-wider font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-sm text-indigo-600 dark:text-primary">terminal</span>Editors &amp; IDEs
+        </span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">VS Code</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">PyCharm</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">IntelliJ IDEA</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Cursor</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Antigravity</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Google Colab</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Jupyter Notebook</span>
+</div>
+</div>
+<!-- Subgroup 2: Version Control & CI -->
+<div class="p-3.5 rounded-xl bg-slate-50/70 dark:bg-surface-container border border-slate-200/70 dark:border-outline-variant/30 flex flex-col gap-2.5 shadow-xs">
+<div class="flex items-center justify-between pb-1.5 border-b border-slate-200/50 dark:border-outline-variant/20">
+<span class="font-tech-badge text-[11px] text-slate-700 dark:text-on-surface uppercase tracking-wider font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-sm text-sky-600 dark:text-secondary">alt_route</span>Version Control &amp; CI
+        </span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Git/GitHub</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Azure Repos</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Azure Pipelines</span>
+</div>
+</div>
+<!-- Subgroup 3: AI Assistants & APIs -->
+<div class="p-3.5 rounded-xl bg-slate-50/70 dark:bg-surface-container border border-slate-200/70 dark:border-outline-variant/30 flex flex-col gap-2.5 shadow-xs">
+<div class="flex items-center justify-between pb-1.5 border-b border-slate-200/50 dark:border-outline-variant/20">
+<span class="font-tech-badge text-[11px] text-slate-700 dark:text-on-surface uppercase tracking-wider font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-sm text-purple-600 dark:text-tertiary">smart_toy</span>AI Assistants &amp; APIs
+        </span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Claude</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Claude Code</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">ChatGPT</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">GitHub Copilot</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Google Gemini</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Perplexity</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">NotebookLM</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Groq</span>
+</div>
+</div>
+<!-- Subgroup 4: Productivity & Design -->
+<div class="p-3.5 rounded-xl bg-slate-50/70 dark:bg-surface-container border border-slate-200/70 dark:border-outline-variant/30 flex flex-col gap-2.5 shadow-xs">
+<div class="flex items-center justify-between pb-1.5 border-b border-slate-200/50 dark:border-outline-variant/20">
+<span class="font-tech-badge text-[11px] text-slate-700 dark:text-on-surface uppercase tracking-wider font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-sm text-emerald-600 dark:text-secondary">palette</span>Productivity &amp; Design
+        </span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Microsoft Excel &amp; Office</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Notion</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Google Workspace</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Canva</span>
+<span class="inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-surface-container-high text-slate-800 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-violet-400 dark:hover:border-tertiary transition-colors shadow-xs">Figma</span>
+</div>
+</div>
+</div>
+</div></div></div>
+</section>
+<!-- ACADEMIC FOUNDATION & COMPREHENSIVE EDUCATION -->
+<section class="portfolio-tab-section w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin pb-space-xl pt-6" id="education" style="scroll-margin-top: 72px;"><div class="flex flex-col gap-space-lg"><div class="flex flex-col gap-space-xs max-w-2xl"><div class="flex items-center gap-2 font-tech-badge text-tech-badge text-indigo-600 dark:text-primary uppercase tracking-widest font-semibold"><span class="material-symbols-outlined text-body-md">school</span><span class="">04 // Academic Foundation</span></div><h2 class="font-headline-lg text-headline-lg text-slate-900 dark:text-on-surface font-display-hero">Education &amp; Core Coursework</h2><p class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant">Academic foundation in computer science theory, systems architecture, and specialized cybersecurity engineering.</p></div><div class="rounded-2xl bg-white dark:bg-surface-container-low border border-slate-200/90 dark:border-outline-variant/30 backdrop-blur-xl p-space-lg lg:p-space-xl shadow-sm hover:shadow-md dark:shadow-xl transition-all duration-300 relative overflow-hidden"><div class="absolute -top-24 -right-24 w-80 h-80 bg-indigo-500/10 dark:bg-primary/10 rounded-full blur-3xl pointer-events-none"></div><div class="absolute -bottom-24 -left-24 w-80 h-80 bg-sky-500/10 dark:bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div><div class="flex flex-col gap-space-lg relative z-10"><div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md border-b border-slate-200/80 dark:border-outline-variant/30"><div class="flex items-start sm:items-center gap-space-md"><img alt="RCOEM Crest" class="w-16 h-16 rounded-full object-contain overflow-hidden shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRZCvdnlIILdaMa6Q2MLrMQ9mCPbhnAkiUTE9hYRUmKcjOLj-dWWe224iIOFvZc1H1EU73Zf47Gj6QVuNLEPW1MAgNgwhN38Q1zJhrTu31IvqLxwB-KFpNYZR0DuWosWECuIIHrM0LDx_6ZUGTW5z-csgGWc-g7huKpotcuEjx9kfZf5y1cXr9QiaKYjYBFhwzJSh6HxwDDHsRfhdlnOtFvNFFgcV6oMB7YoOZzSkbjPtgSxOw1mTjZ4Hd74WovK9xXnMMAB6ztuQM1A"><div class="flex flex-col gap-1"><div class="flex flex-wrap items-center gap-2"><span class="px-2.5 py-0.5 rounded-full text-label-sm font-tech-code font-semibold bg-indigo-50 text-indigo-700 dark:bg-primary/10 dark:text-primary border border-indigo-200/60 dark:border-primary/20">2021 – 2025</span></div><h3 class="font-headline-md text-headline-md text-slate-900 dark:text-on-surface font-bold tracking-tight">B.Tech in Computer Science &amp; Engineering</h3><div class="flex flex-wrap items-center gap-2 text-body-sm font-medium"><span class="text-sky-600 dark:text-secondary font-tech-code font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-body-sm">security</span>Specialization: Cyber Security</span><span class="text-slate-400 dark:text-outline hidden sm:inline">•</span><span class="text-slate-600 dark:text-on-surface-variant">Shri Ramdeobaba College of Engineering and Management (RCOEM), Nagpur</span></div></div></div><div class="self-start lg:self-auto flex items-center gap-space-sm px-space-md py-3 rounded-xl bg-slate-50 dark:bg-surface-container-high border border-slate-200/80 dark:border-outline-variant/40 shadow-xs shrink-0"><div class="p-2.5 rounded-lg bg-indigo-50 dark:bg-secondary-container/20 text-indigo-600 dark:text-secondary flex items-center justify-center"><span class="material-symbols-outlined text-headline-md">workspace_premium</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-slate-500 dark:text-outline uppercase tracking-wider font-semibold">Cumulative GPA</span><span class="font-headline-md text-headline-md text-indigo-600 dark:text-secondary font-bold tracking-tight">9.03 <span class="text-body-sm text-slate-500 dark:text-outline font-normal">/ 10.0</span></span></div></div></div><div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg"><div class="p-space-md rounded-xl bg-slate-50/70 dark:bg-surface-container-high/60 border border-slate-200/80 dark:border-outline-variant/40 flex flex-col gap-space-sm shadow-xs hover:border-indigo-300 dark:hover:border-primary/50 transition-all duration-300"><div class="flex items-center justify-between pb-2 border-b border-slate-200/60 dark:border-outline-variant/30"><div class="flex items-center gap-2 text-indigo-600 dark:text-primary font-tech-code text-tech-code font-semibold uppercase tracking-wider"><span class="material-symbols-outlined text-body-md">terminal</span><span class="">Computer Science Fundamentals</span></div></div><div class="flex flex-wrap gap-2 pt-1"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Data Structures &amp; Algorithms</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Design &amp; Analysis of Algorithms</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Object-Oriented Programming</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Operating Systems</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Networking &amp; Protocols</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Database Management Systems</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Software Engineering</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>SDLC &amp; Agile Methodologies</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Cloud Computing</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-indigo-400 dark:hover:border-primary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Artificial Intelligence</span></div></div><div class="p-space-md rounded-xl bg-slate-50/70 dark:bg-surface-container-high/60 border border-slate-200/80 dark:border-outline-variant/40 flex flex-col gap-space-sm shadow-xs hover:border-sky-300 dark:hover:border-secondary/50 transition-all duration-300"><div class="flex items-center justify-between pb-2 border-b border-slate-200/60 dark:border-outline-variant/30"><div class="flex items-center gap-2 text-sky-600 dark:text-secondary font-tech-code text-tech-code font-semibold uppercase tracking-wider"><span class="material-symbols-outlined text-body-md">shield_lock</span><span class="">Cyber Security Specialization</span></div></div><div class="flex flex-wrap gap-2 pt-1"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Cloud Security Architecture</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Application Security</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Secure Coding Practices</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Network Security Administration</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Incident Handling &amp; Response</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>IT Infrastructure Auditing</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white dark:bg-surface-container text-slate-700 dark:text-on-surface border border-slate-200/80 dark:border-outline-variant/40 font-tech-code text-label-sm font-medium hover:border-sky-400 dark:hover:border-secondary transition-colors shadow-xs"><span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Security Governance &amp; Compliance</span></div></div></div></div></div><div class="flex flex-col gap-space-lg pt-space-lg border-t border-slate-200/80 dark:border-outline-variant/30" id="certifications-inner" style="scroll-margin-top: 44px;"><div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md"><div class="flex flex-col gap-space-xs max-w-2xl"><div class="flex items-center gap-2 font-tech-badge text-tech-badge text-sky-600 dark:text-secondary uppercase tracking-widest font-semibold"><span class="material-symbols-outlined text-body-md">verified</span><span class="">05 // Industry Credentials</span></div><h2 class="font-headline-lg text-headline-lg text-slate-900 dark:text-on-surface font-display-hero">Certifications &amp; Accreditations</h2><p class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant">Verified professional qualifications across enterprise cloud security, zero-trust network architectures, and deep neural models.</p></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md"><div class="p-space-md rounded-2xl bg-white dark:bg-surface-container-low border border-slate-200/90 dark:border-outline-variant/30 backdrop-blur-md shadow-xs hover:shadow-md dark:shadow-xl flex flex-col justify-between gap-space-md hover:border-indigo-400/50 dark:hover:border-primary/50 transition-all duration-300 relative overflow-hidden group"><div class="flex flex-col gap-2"><div class="flex items-center justify-between pb-1"><span class="font-tech-badge text-label-sm text-indigo-600 dark:text-primary font-semibold uppercase tracking-wider">Google Cloud</span><span class="w-2 h-2 rounded-full bg-indigo-500"></span></div><h4 class="font-body-lg text-body-lg text-slate-900 dark:text-on-surface font-semibold tracking-tight">Introduction to Generative AI</h4><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant leading-relaxed">Google Cloud Skills Boost • Foundation Model Architectures &amp; Attention Mechanisms</p></div><div class="pt-space-sm border-t border-slate-100 dark:border-outline-variant/20 flex items-center justify-between"><a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 dark:bg-primary-container/20 dark:hover:bg-primary/20 text-indigo-700 dark:text-primary font-tech-code text-label-sm font-semibold transition-all whitespace-nowrap" href="https://www.skills.google/public_profiles/5180d45c-eec1-48ee-aa0b-995005687e4e/badges/8983448" rel="noopener noreferrer" target="_blank"><span class="">Verify Certificate</span><span class="material-symbols-outlined text-body-sm">north_east</span></a></div></div><div class="p-space-md rounded-2xl bg-white dark:bg-surface-container-low border border-slate-200/90 dark:border-outline-variant/30 backdrop-blur-md shadow-xs hover:shadow-md dark:shadow-xl flex flex-col justify-between gap-space-md hover:border-sky-400/50 dark:hover:border-secondary/50 transition-all duration-300 relative overflow-hidden group"><div class="flex flex-col gap-2"><div class="flex items-center justify-between pb-1"><span class="font-tech-badge text-label-sm text-sky-600 dark:text-secondary font-semibold uppercase tracking-wider">Zscaler Academy</span><span class="w-2 h-2 rounded-full bg-sky-500"></span></div><h4 class="font-body-lg text-body-lg text-slate-900 dark:text-on-surface font-semibold tracking-tight">Zscaler Zero Trust Associate (ZTCA)</h4><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant leading-relaxed">Zscaler Academy • Zero Trust Network Access Architecture &amp; Secure Service Edge</p></div><div class="pt-space-sm border-t border-slate-100 dark:border-outline-variant/20 flex items-center justify-between"><a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sky-50 hover:bg-sky-100 dark:bg-secondary-container/20 dark:hover:bg-secondary/20 text-sky-700 dark:text-secondary font-tech-code text-label-sm font-semibold transition-all whitespace-nowrap" href="https://drive.google.com/file/d/1ESOam78z90C_-BiMvkF5H25xdS9byV3Q/view" rel="noopener noreferrer" target="_blank"><span class="">Verify Certificate</span><span class="material-symbols-outlined text-body-sm">north_east</span></a></div></div><div class="p-space-md rounded-2xl bg-white dark:bg-surface-container-low border border-slate-200/90 dark:border-outline-variant/30 backdrop-blur-md shadow-xs hover:shadow-md dark:shadow-xl flex flex-col justify-between gap-space-md hover:border-purple-400/50 dark:hover:border-tertiary/50 transition-all duration-300 relative overflow-hidden group"><div class="flex flex-col gap-2"><div class="flex items-center justify-between pb-1"><span class="font-tech-badge text-label-sm text-purple-600 dark:text-tertiary font-semibold uppercase tracking-wider">Coursera • Google</span><span class="w-2 h-2 rounded-full bg-purple-500"></span></div><h4 class="font-body-lg text-body-lg text-slate-900 dark:text-on-surface font-semibold tracking-tight">Google Cybersecurity Professional Certificate</h4><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant leading-relaxed">Google • Security Operations, Incident Response, Python Automation &amp; SIEM</p></div><div class="pt-space-sm border-t border-slate-100 dark:border-outline-variant/20 flex items-center justify-between"><a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-50 hover:bg-purple-100 dark:bg-tertiary/10 dark:hover:bg-tertiary/20 text-purple-700 dark:text-tertiary font-tech-code text-label-sm font-semibold transition-all whitespace-nowrap" href="https://www.credly.com/badges/b0e94e01-6a7a-4c14-aeea-b71ddc0e7112/public_url" rel="noopener noreferrer" target="_blank"><span class="">Verify Certificate</span><span class="material-symbols-outlined text-body-sm">north_east</span></a></div></div></div></div></div></section>
+<!-- INTERACTIVE CONTACT & GET IN TOUCH SECTION -->
+<section class="portfolio-tab-section w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin pb-space-xl pt-6" id="contact" style="scroll-margin-top: 72px;">
+<div class="rounded-3xl bg-white dark:bg-surface-container-low/95 border border-slate-200/90 dark:border-transparent backdrop-blur-2xl p-space-lg lg:p-space-xl shadow-lg dark:shadow-2xl relative overflow-hidden">
+<!-- Ambient Backdrops -->
+<div class="absolute -bottom-24 -left-24 w-80 h-80 bg-indigo-100/50 dark:bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -top-24 -right-24 w-80 h-80 bg-sky-100/50 dark:bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left: Contact Narrative & Direct Links -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-space-lg"><div class="flex flex-col gap-space-md"><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-2 font-tech-badge text-tech-badge text-sky-600 dark:text-secondary uppercase tracking-widest font-semibold"><span class="material-symbols-outlined text-body-md">alternate_email</span><span class="">06 // Contact &amp; Collaborate</span></div><h2 class="font-headline-lg text-headline-lg text-slate-900 dark:text-on-surface font-display-hero">Let's Build Something Secure &amp; Scalable</h2><p class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant leading-relaxed">Open for full-time Software Engineer and Cybersecurity roles. <b>Open to relocation</b> (open to onsite, hybrid, and remote opportunities). Reach out for collaboration.</p></div><div class="flex flex-col gap-2.5 pt-2"><div class="flex items-center gap-2.5 pt-1"><a aria-label="GitHub Profile" class="w-11 h-11 rounded-xl bg-slate-100 dark:bg-surface-container-high/60 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-700 dark:text-on-surface-variant hover:text-slate-900 dark:hover:text-primary hover:border-slate-300 dark:hover:border-primary dark:hover:bg-surface-container-highest transition-all shadow-xs" href="https://github.com/sharvarigohane" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg></a><a aria-label="LinkedIn Profile" class="w-11 h-11 rounded-xl bg-slate-100 dark:bg-surface-container-high/60 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-700 dark:text-on-surface-variant hover:text-slate-900 dark:hover:text-primary hover:border-slate-300 dark:hover:border-primary dark:hover:bg-surface-container-highest transition-all shadow-xs" href="https://linkedin.com/in/sharvarigohane" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a><a aria-label="Email" class="w-11 h-11 rounded-xl bg-slate-100 dark:bg-surface-container-high/60 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-700 dark:text-on-surface-variant hover:text-slate-900 dark:hover:text-primary hover:border-slate-300 dark:hover:border-primary dark:hover:bg-surface-container-highest transition-all shadow-xs" href="mailto:sharvarigohane@gmail.com"><svg aria-hidden="true" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg></a></div></div></div></div>
+<!-- Right: Fast Interactive Message Dispatcher -->
+<div class="lg:col-span-7 flex flex-col justify-center">
+<form class="rounded-2xl bg-slate-50/80 dark:bg-surface-container/80 border border-slate-200/90 dark:border-transparent backdrop-blur-xl p-space-lg shadow-sm dark:shadow-xl flex flex-col gap-space-md" id="contactForm" onsubmit="handleContactSubmit(event)"><div class="flex items-center justify-between pb-space-xs border-b border-slate-200/60 dark:border-transparent"><span class="font-tech-badge text-tech-badge text-sky-700 dark:text-secondary uppercase tracking-widest flex items-center gap-1.5 font-semibold"><span class="material-symbols-outlined text-body-sm">terminal</span>Quick Message Terminal</span></div><div class="grid grid-cols-1 md:grid-cols-2 gap-space-md"><div class="flex flex-col gap-1.5"><label class="font-tech-code text-label-sm text-slate-700 dark:text-on-surface-variant font-semibold" for="senderName">Your Name *</label><div class="relative"><span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 dark:text-outline"><span class="material-symbols-outlined text-body-md">person</span></span><input class="w-full pl-10 pr-4 py-2.5 rounded-lg bg-white dark:bg-surface-container-highest border border-slate-200 dark:border-transparent text-slate-900 dark:text-on-surface placeholder:text-slate-400 dark:placeholder:text-outline/60 focus:bg-white dark:focus:bg-surface-container-high focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-primary font-body-sm transition-all shadow-xs" id="senderName" name="name" placeholder="e.g. Alex Mercer" required="" type="text"></div></div><div class="flex flex-col gap-1.5"><label class="font-tech-code text-label-sm text-slate-700 dark:text-on-surface-variant font-semibold" for="senderEmail">Email Address *</label><div class="relative"><span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 dark:text-outline"><span class="material-symbols-outlined text-body-md">alternate_email</span></span><input class="w-full pl-10 pr-4 py-2.5 rounded-lg bg-white dark:bg-surface-container-highest border border-slate-200 dark:border-transparent text-slate-900 dark:text-on-surface placeholder:text-slate-400 dark:placeholder:text-outline/60 focus:bg-white dark:focus:bg-surface-container-high focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-primary font-body-sm transition-all shadow-xs" id="senderEmail" name="email" placeholder="name@company.com" required="" type="email"></div></div></div><div class="flex flex-col gap-1.5"><label class="font-tech-code text-label-sm text-slate-700 dark:text-on-surface-variant font-semibold" for="senderSubject">Subject / Role Opportunity</label><input class="w-full px-4 py-2.5 rounded-lg bg-white dark:bg-surface-container-highest border border-slate-200 dark:border-transparent text-slate-900 dark:text-on-surface placeholder:text-slate-400 dark:placeholder:text-outline/60 focus:bg-white dark:focus:bg-surface-container-high focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-primary font-body-sm transition-all shadow-xs" id="senderSubject" name="subject" placeholder="e.g. Full-Stack / Security Role Inquiry" type="text"></div><div class="flex flex-col gap-1.5"><label class="font-tech-code text-label-sm text-slate-700 dark:text-on-surface-variant font-semibold" for="senderMessage">Message *</label><textarea class="w-full p-4 rounded-lg bg-white dark:bg-surface-container-highest border border-slate-200 dark:border-transparent text-slate-900 dark:text-on-surface placeholder:text-slate-400 dark:placeholder:text-outline/60 focus:bg-white dark:focus:bg-surface-container-high focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-primary font-body-sm transition-all resize-none shadow-xs" id="senderMessage" name="message" placeholder="Hi Sharvari, we love your experience with Quorum Software and AWS..." required="" rows="4"></textarea></div><button class="w-full py-3 px-space-md rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white dark:bg-gradient-to-r dark:from-primary dark:to-primary-container dark:text-on-primary font-tech-code text-tech-code font-semibold flex items-center justify-center gap-2 hover:opacity-95 shadow-md hover:shadow-lg dark:shadow-[0_0_20px_-3px_rgba(192,193,255,0.4)] transition-all cursor-pointer" id="submitBtn" type="submit"><span class="material-symbols-outlined text-body-md">send</span><span class="" id="btnText">Transmit Message</span></button><div class="hidden p-space-sm rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 dark:border-transparent dark:bg-secondary/10 dark:text-secondary font-tech-code text-tech-code flex items-start gap-2.5 transition-all shadow-xs" id="formToast"><span class="material-symbols-outlined text-body-md text-emerald-600 dark:text-secondary mt-0.5 shrink-0">task_alt</span><div class="flex flex-col gap-0.5 text-label-sm"><span class="font-bold font-tech-badge uppercase tracking-wider">✓ Transmission Initiated</span><span class="">Email client launched with pre-formatted draft to <strong>sharvarigohane@gmail.com</strong>.</span></div></div></form><script class="">
+window.handleContactSubmit = function(e) {
+  if (e) e.preventDefault();
+  var form = document.getElementById('contactForm');
+  var nameInput = document.getElementById('senderName');
+  var emailInput = document.getElementById('senderEmail');
+  var subjectInput = document.getElementById('senderSubject');
+  var messageInput = document.getElementById('senderMessage');
+  var submitBtn = document.getElementById('submitBtn');
+  var btnText = document.getElementById('btnText');
+  var toast = document.getElementById('formToast');
+
+  var name = nameInput ? nameInput.value.trim() : '';
+  var email = emailInput ? emailInput.value.trim() : '';
+  var subjectVal = subjectInput ? subjectInput.value.trim() : '';
+  var message = messageInput ? messageInput.value.trim() : '';
+
+  if (!name || !email || !message) {
+    alert('Please fill in your Name, Email, and Message before transmitting.');
+    return false;
+  }
+
+  if (btnText) btnText.textContent = 'Formatting & Launching Client...';
+  if (submitBtn) submitBtn.disabled = true;
+
+  var emailSubject = subjectVal ? subjectVal + ' [via Portfolio]' : 'Portfolio Inquiry from ' + name;
+  var emailBody = 'Hi Sharvari,\n\n' +
+    message + '\n\n' +
+    '----------------------------------------\n' +
+    'Sender Details:\n' +
+    'Name: ' + name + '\n' +
+    'Email: ' + email + '\n' +
+    (subjectVal ? 'Subject / Role: ' + subjectVal + '\n' : '') +
+    'Sent from Sharvari Gohane Portfolio Terminal\n' +
+    '----------------------------------------';
+
+  var mailtoUrl = 'mailto:sharvarigohane@gmail.com' +
+    '?subject=' + encodeURIComponent(emailSubject) +
+    '&body=' + encodeURIComponent(emailBody);
+
+  // Open user mail client
+  try {
+    window.location.href = mailtoUrl;
+  } catch (err) {
+    window.open(mailtoUrl, '_blank');
+  }
+
+  if (toast) toast.classList.remove('hidden');
+  if (btnText) btnText.textContent = 'Transmitted ✓';
+
+  if (form) form.reset();
+
+  setTimeout(function() {
+    if (btnText) btnText.textContent = 'Transmit Message';
+    if (submitBtn) submitBtn.disabled = false;
+  }, 4000);
+
+  setTimeout(function() {
+    if (toast) toast.classList.add('hidden');
+  }, 8000);
+
+  return false;
+};
+</script>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<footer class="w-full bg-white dark:bg-surface-container-low border-t border-slate-200/80 dark:border-outline-variant/30 shadow-[0_-1px_10px_rgba(0,0,0,0.02)] dark:shadow-[0_-1px_8px_rgba(0,0,0,0.04)] mt-auto transition-colors"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl"><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md"><div class="flex flex-col sm:flex-row items-center gap-space-sm text-slate-500 dark:text-outline font-body-sm text-body-sm"><span class="">© 2026 Sharvari Gohane. All rights reserved.</span></div><a aria-label="Back to top" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-surface-container dark:hover:bg-surface-container-highest text-slate-700 dark:text-on-surface-variant hover:text-slate-900 dark:hover:text-primary font-tech-code text-label-sm font-semibold transition-all shadow-xs border border-slate-200/80 dark:border-outline-variant/30" href="#" onclick="scrollToSection(event, 'about')"><span class="material-symbols-outlined text-body-sm">arrow_upward</span>Back to Top</a></div></div></footer>
+<!-- PHOTO UPLOAD & APPLICATION SCRIPTS -->
+<script>
+  // Robust Photo Upload Handler
+  function handlePhotoUpload(e) {
+    const file = e.target.files && e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        const avatarImg = document.getElementById('hero-avatar-img');
+        const avatarPlaceholder = document.getElementById('hero-avatar-placeholder');
+        const uploadBtnText = document.getElementById('hero-upload-text');
+        if (avatarImg) {
+          avatarImg.src = evt.target.result;
+          avatarImg.classList.remove('hidden');
+        }
+        if (avatarPlaceholder) {
+          avatarPlaceholder.classList.add('hidden');
+        }
+        if (uploadBtnText) {
+          uploadBtnText.textContent = 'Change Photo';
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  // Setup Drag & Drop and Click Trigger on Drop Zone
+  document.addEventListener('DOMContentLoaded', () => {
+    const dropZone = document.getElementById('hero-drop-zone');
+    const fileInput = document.getElementById('hero-photo-input');
+
+    if (dropZone && fileInput) {
+      ['dragenter', 'dragover'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.add('ring-2', 'ring-indigo-500', 'dark:ring-primary');
+        }, false);
+      });
+
+      ['dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.remove('ring-2', 'ring-indigo-500', 'dark:ring-primary');
+        }, false);
+      });
+
+      dropZone.addEventListener('drop', (e) => {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        if (files && files.length > 0) {
+          fileInput.files = files;
+          handlePhotoUpload({ target: { files: files } });
+        }
+      }, false);
+    }
+  });
+
+  // Direct Header Theme Toggle
+  function toggleModeDirect() {
+    const isDark = document.documentElement.classList.contains('dark');
+    if (isDark) {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+    } else {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    }
+  }
+
+  // Projects category tab filter
+  function filterProjects(category) {
+    const tabs = document.querySelectorAll('.filter-tab');
+    tabs.forEach(tab => {
+      if (tab.getAttribute('data-filter') === category) {
+        tab.className = "filter-tab px-space-md py-2 rounded-lg font-tech-badge text-tech-badge transition-all bg-white dark:bg-surface-container text-indigo-600 dark:text-primary shadow-xs font-semibold";
+      } else {
+        tab.className = "filter-tab px-space-md py-2 rounded-lg text-slate-600 hover:text-slate-900 dark:text-on-surface-variant dark:hover:text-on-surface font-tech-badge text-tech-badge transition-all";
+      }
+    });
+
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach(card => {
+      const rawCats = card.getAttribute('data-categories') || '';
+      const cats = rawCats.split(/[\s,]+/);
+      if (category === 'all' || cats.includes(category)) {
+        card.classList.remove('hidden');
+        card.classList.add('flex');
+      } else {
+        card.classList.remove('flex');
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+  // Contact Form Transmit Handler
+  function handleContactSubmit(e) {
+    e.preventDefault();
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const toast = document.getElementById('formToast');
+
+    if (btnText) btnText.textContent = "Encrypting & Sending...";
+    if (submitBtn) submitBtn.disabled = true;
+
+    setTimeout(() => {
+      if (toast) toast.classList.remove('hidden');
+      if (btnText) btnText.textContent = "Transmitted ✓";
+      document.getElementById('contactForm').reset();
+
+      setTimeout(() => {
+        if (toast) toast.classList.add('hidden');
+        if (btnText) btnText.textContent = "Transmit Message";
+        if (submitBtn) submitBtn.disabled = false;
+      }, 5000);
+    }, 700);
+  }
+</script>
+<script class="">
+window.scrollToSection = function(event, sectionId) {
+  if (event) event.preventDefault();
+  var targetEl = document.getElementById(sectionId);
+  if (targetEl) {
+    targetEl.scrollIntoView({ behavior: 'smooth' });
+  }
+  document.querySelectorAll('.nav-tab-link').forEach(function(link) {
+    if (link.getAttribute('data-tab') === sectionId) {
+      link.classList.add('active-nav-link', 'text-indigo-600', 'dark:text-primary', 'font-tech-badge');
+      link.classList.remove('text-slate-600', 'dark:text-on-surface-variant', 'font-medium');
+    } else {
+      link.classList.remove('active-nav-link', 'text-indigo-600', 'dark:text-primary', 'font-tech-badge');
+      link.classList.add('text-slate-600', 'dark:text-on-surface-variant', 'font-medium');
+    }
+  });
+  try {
+    history.replaceState(null, '', '#' + sectionId);
+  } catch (e) {}
+};
+</script>
+<script>
+window.switchTab = function(tabId) {
+  var tabs = ['about', 'experience', 'projects', 'skills', 'education', 'contact'];
+  if (!tabs.includes(tabId)) tabId = 'about';
+  tabs.forEach(function(t) {
+    var sec = document.getElementById(t);
+    if (sec) {
+      if (t === tabId) {
+        sec.classList.add('tab-active');
+      } else {
+        sec.classList.remove('tab-active');
+      }
+    }
+  });
+  document.querySelectorAll('.nav-tab-link').forEach(function(link) {
+    if (link.getAttribute('data-tab') === tabId) {
+      link.classList.add('active-nav-link');
+    } else {
+      link.classList.remove('active-nav-link');
+    }
+  });
+  try {
+    history.replaceState(null, '', '#' + tabId);
+  } catch (err) {}
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+window.addEventListener('hashchange', function() {
+  var currentHash = window.location.hash.replace('#', '');
+  if (currentHash) {
+    window.switchTab(currentHash);
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var initialHash = window.location.hash.replace('#', '');
+  if (initialHash && ['about', 'experience', 'projects', 'skills', 'education', 'contact'].includes(initialHash)) {
+    window.switchTab(initialHash);
+  } else {
+    window.switchTab('about');
+  }
+});
+</script>
+<script id="nav-scroll-fix">
+function scrollToSection(event, id) {
+  if (event) event.preventDefault();
+  var target = document.getElementById(id);
+  if (target) {
+    var headerOffset = 70;
+    var elementPosition = target.getBoundingClientRect().top;
+    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+}
+</script><script class="" id="initial-scroll-reset">try{if('scrollRestoration' in history){history.scrollRestoration='manual';}}catch(e){}function forcePageTop(){window.scrollTo({top:0,left:0,behavior:'instant'});document.documentElement.scrollTop=0;if(document.body)document.body.scrollTop=0;}forcePageTop();window.addEventListener('DOMContentLoaded',function(){if(window.location.hash){try{history.replaceState(null,'',window.location.pathname+window.location.search);}catch(e){}}forcePageTop();requestAnimationFrame(forcePageTop);setTimeout(forcePageTop,0);setTimeout(forcePageTop,50);setTimeout(forcePageTop,150);});window.addEventListener('load',function(){forcePageTop();setTimeout(forcePageTop,10);});</script><script id="responsive-nav-handler" class="">window.toggleMobileNav = function() { var drawer = document.getElementById('mobile-drawer'); var icon = document.getElementById('mobile-menu-icon'); if (!drawer) return; if (drawer.classList.contains('hidden')) { drawer.classList.remove('hidden'); if (icon) icon.textContent = 'close'; } else { drawer.classList.add('hidden'); if (icon) icon.textContent = 'menu'; } }; window.handleMobileNavClick = function(event, sectionId) { if (event) event.preventDefault(); var drawer = document.getElementById('mobile-drawer'); var icon = document.getElementById('mobile-menu-icon'); if (drawer) drawer.classList.add('hidden'); if (icon) icon.textContent = 'menu'; scrollToSection(event, sectionId); };</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
