@@ -1388,4 +1388,39 @@ function scrollToSection(event, id) {
   window.addEventListener('resize', function () { if (window.innerWidth !== lastW) fit(); });
 })();
 </script>
+
+<style id="mobile-photo-frame-final-tweak">
+/* Subtle mobile-only refinement: slightly smaller photo card and title bar. */
+@media (max-width: 767px) {
+  #about .backdrop-blur-2xl:has(#hero-drop-zone) {
+    width: 100% !important;
+    max-width: 276px !important;
+    border-width: 2px !important;
+    border-radius: 25px !important;
+  }
+  /* Avoid the stark white outline in dark theme; keep a soft neutral edge. */
+  html.dark #about .backdrop-blur-2xl:has(#hero-drop-zone) {
+    border-color: rgba(148, 163, 184, 0.34) !important;
+  }
+  html:not(.dark) #about .backdrop-blur-2xl:has(#hero-drop-zone) {
+    border-color: rgba(226, 232, 240, 0.95) !important;
+  }
+  #about .backdrop-blur-2xl:has(#hero-drop-zone) > div:first-child {
+    min-height: 37px !important;
+    padding: 8px 16px !important;
+  }
+  #about .backdrop-blur-2xl:has(#hero-drop-zone) > div:nth-child(2) {
+    padding: 8px !important;
+  }
+  #about .backdrop-blur-2xl:has(#hero-drop-zone) > div:nth-child(2) > div {
+    max-width: 218px !important;
+  }
+  #hero-drop-zone {
+    width: 218px !important;
+    max-width: 218px !important;
+    height: 218px !important;
+    border-radius: 19px !important;
+  }
+}
+</style>
 </body></html>
